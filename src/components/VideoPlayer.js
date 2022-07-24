@@ -2,7 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import logo from '../logo.svg';
 
 const VideoPlayer = () => {
-  const SEEK_SECONDS = 5;
+  const SEEK_SECONDS = 5,
+    GET_VIDEO_API = "https://subham-video-player-api.herokuapp.com/video";
+
   const videoRef = useRef();
   const [error, setError] = useState(null);
   const [videoUrl, setVideoUrl] = useState(null);
@@ -21,7 +23,7 @@ const VideoPlayer = () => {
   }
 
   const getVideoUrl = () => {
-    fetch("http://localhost:8000/video")
+    fetch(GET_VIDEO_API)
     .then((res) => res.json())
     .then((data) => {
       if(data?.success && data?.url) {
