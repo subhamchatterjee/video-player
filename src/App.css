@@ -21,13 +21,14 @@
 }
 
 .page .video-player-container .video-player .arrow {
-  color: #aaa;
-  font-size: 80px;
+  opacity: 0.6;
+  font-size: 50px;
   cursor: pointer;
+  user-select: none;
 }
 
 .page .video-player-container .video-player .arrow:hover {
-  color: #666;
+  opacity: 1;
 }
 
 .page .video-player-container .error,
@@ -70,12 +71,14 @@
   }
   .page .video-player-container .video-player .arrow {
     z-index: 1;
+    opacity: 1;
     position: absolute;
+    top: calc(100% + 10px);
   }
   .page .video-player-container .video-player .arrow-left {
-    left: 0;
+    left: 5px;
   }
   .page .video-player-container .video-player .arrow-right {
-    right: 0;
+    right: 5px;
   }
 }

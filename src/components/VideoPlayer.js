@@ -59,9 +59,9 @@ const VideoPlayer = () => {
     <div className="video-player-container">
       {videoUrl ? (
         <div className="video-player">
-          <div className="arrow arrow-left" onClick={() => seek("backward")} title="5 secs backward">&#8249;</div>
+          <div className="arrow arrow-left" onClick={() => seek("backward")} title="5 secs backward">&#9194;</div>
           <video ref={videoRef} controls width="100%" />
-          <div className="arrow arrow-right" onClick={() => seek("forward")} title="5 secs forward">&#8250;</div>
+          <div className="arrow arrow-right" onClick={() => seek("forward")} title="5 secs forward">&#9193;</div>
         </div>
       ) : (
         <div className="loading-video">
